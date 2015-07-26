@@ -17,12 +17,12 @@ public class ServiceImpl implements ServiceIn {
 			
 			Client client = Client.create();
 			
-			WebResource webResource = client.resource("http://localhost:8080/cookIndyaWs/signUp");
+			WebResource webResource = client.resource("http://localhost:8080/cookindya/api/user/register");
 			
-			ClientResponse response = webResource.type("application/json").post(ClientResponse.class,userInfoJson);
+			ClientResponse response = webResource.type("application/json").post(ClientResponse.class,userInfoJson.toString());
 			
-			if(response.getStatus() != 201){
-				throw new RuntimeException("Failed : HTTP error code :" + response.getStatus());
+			if(response.getStatus() != 200){
+				throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
 			}
 			
 			System.out.println("Output from Server .... \n");

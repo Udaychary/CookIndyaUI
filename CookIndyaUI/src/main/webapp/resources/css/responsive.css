@@ -5,9 +5,14 @@ div.cart-collaterals ul.products li.product {
   position: relative;
   width: 160px;
 }
-.coupon input[type="text"] {
+.coupon input[type="text"], {
   width: 100px;
-}  
+}
+.coupon input[type="password"], {
+  width: 100px;
+} 
+  
+
 input[type="submit"], button[type="submit"] {
   padding: 11px 15px;
 } 
@@ -184,6 +189,13 @@ table.shop_table th {
 div.coupon input[type="text"] {
   width: 100px;
 } 
+
+div.coupon input[type="password"] {
+  width: 100px;
+} 
+
+
+
 .coupon {margin-bottom: 10px}      
 .cross-sells {
   float: none;

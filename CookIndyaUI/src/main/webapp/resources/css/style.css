@@ -589,6 +589,12 @@ width: 10px;
 .single-sidebar {
     margin-bottom: 50px;
 }
+
+ input[type="password"]{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 input[type="text"], input[type="password"], input[type="email"], textarea {
     border: 1px solid #ddd;
     padding: 10px;
@@ -911,6 +917,11 @@ div.cart-collaterals ul.products li.product .price ins {
     margin-bottom: 10px;
     width: 100%;
 }
+#customer_details input[type="password"] {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 #customer_details h3 {
     color: #1abc9c;
     font-size: 20px;

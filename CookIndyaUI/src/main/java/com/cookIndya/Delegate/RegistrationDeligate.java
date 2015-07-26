@@ -14,7 +14,15 @@ public class RegistrationDeligate {
 			
 			JSONObject json = new JSONObject();
 			
-			json.put("Name", regsVO.getName());
+			//json.put("userName", regsVO.getName());
+			json.put("userName", "Uday Bhaskar Achary");
+			json.put("password", "Password@123");
+			json.put("startDate", "18-07-2015");
+			json.put("expiry", "18-07-2017");
+			json.put("blocked", "N");
+			json.put("isAdmin", "N");
+			
+			
 			
 			ServiceIn service = new ServiceImpl();
 			
