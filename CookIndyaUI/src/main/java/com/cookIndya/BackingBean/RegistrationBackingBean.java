@@ -2,6 +2,7 @@ package com.cookIndya.BackingBean;
 
 import javax.faces.component.html.HtmlInputSecret;
 import javax.faces.component.html.HtmlInputText;
+import javax.faces.component.html.HtmlSelectOneRadio;
 
 public class RegistrationBackingBean {
 	
@@ -16,6 +17,7 @@ public class RegistrationBackingBean {
 	private HtmlInputText shopName;
 	private HtmlInputText aboutMe;
 	private HtmlInputText expertise;
+	private HtmlSelectOneRadio userType;
 	
 	
 
@@ -107,6 +109,14 @@ public class RegistrationBackingBean {
 
 	public void setName(HtmlInputText name) {
 		this.name = name;
+	}
+
+	public HtmlSelectOneRadio getUserType() {
+		return userType;
+	}
+
+	public void setUserType(HtmlSelectOneRadio userType) {
+		this.userType = userType;
 	}
 	
 	

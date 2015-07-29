@@ -25,6 +25,12 @@ public class RegistrationBean extends RegistrationBackingBean {
 				regsVO.setName(getName().getValue().toString());
 			}
 			
+			if(getUserType()!=null && getUserType().getValue().toString()!=null){
+				regsVO.setUserType(getUserType().getValue().toString());
+			}
+			
+			System.out.println(getName().getValue().toString() +  "  " +getUserType().getValue().toString() );
+			
 			regDeligate.userRegistration(regsVO);
 			
 		}catch(Exception e){

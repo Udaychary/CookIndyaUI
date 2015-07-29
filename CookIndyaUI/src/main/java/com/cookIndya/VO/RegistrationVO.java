@@ -16,6 +16,9 @@ public class RegistrationVO {
 	private String shopName;
 	private String aboutMe;
 	private String expertise;
+	private String userType;
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -81,6 +84,12 @@ public class RegistrationVO {
 	}
 	public void setExpertise(String expertise) {
 		this.expertise = expertise;
+	}
+	public String getUserType() {
+		return userType;
+	}
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 	
 	

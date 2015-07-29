@@ -3,6 +3,9 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j" 
+	xmlns:rich="http://richfaces.org/rich"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 
@@ -165,6 +168,162 @@
 			
 			
 			<!-- End promo area -->
+			
+			<!-- Button trigger modal -->
+
+<div class="container"> 
+   
+ </div>
+  
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <!-- <br> -->
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">UserName:</label>
+              <div class="controls">
+                <input id="userid" name="userid" type="text" class="form-control" placeholder="CookIndya"  required=""></input>
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" ></input>
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me"> Remember me </input>
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <h:form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <!-- <input id="EmailId" name="Email" class="form-control" type="text" placeholder="cookindya@gmail.com"  required=""></input>-->             	
+				<h:inputText  id="emailId"  styleClass="form-control"   binding="#{registrationBean.emailId}" ></h:inputText>
+              </div>
+            </div>
+            
+            
+            <!-- Text input-->
+              <div class="control-group">
+              <label class="control-label" for="userid">Mobile:</label>
+              <div class="controls">
+                <h:inputText  id="mobileNumber"  styleClass="form-control"  binding="#{registrationBean.mobileNumber}" ></h:inputText>              
+			<!-- <input id="userid" name="userid" class="form-control" type="text" placeholder="8904031114"  required=""></input> -->
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Name:</label>
+              <div class="controls">
+                <!--  <input id="userid" name="userid" class="form-control" type="text" placeholder="CookIndya"  required=""></input>-->
+                <h:inputText  id="name"  styleClass="form-control"   binding="#{registrationBean.name}"></h:inputText>
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">  
+                <!-- <input id="password" name="password" class="form-control" type="password" placeholder="********"  required=""></input> -->
+                <h:inputSecret  id="password"  styleClass="form-control" style="border: 1px solid #ddd;padding: 10px;border-radius: 4px;height: 34px;font-size: 14px;line-height: 1.42857143;"  binding="#{registrationBean.password}"  ></h:inputSecret>
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            
+            
+            <!-- Multiple Radios (inline) -->
+            <!-- <br> -->
+            <div class="control-group">
+              
+              <div class="controls">
+                
+                <h:selectOneRadio binding="#{registrationBean.userType}" >
+                	<f:selectItem itemValue="cook" itemLabel="I'm a Cook"  />
+   					<f:selectItem itemValue="foodSupper" itemLabel="I'm Food Supper" />
+   					<f:selectItem itemValue="both" itemLabel="Both" />  
+                </h:selectOneRadio>
+                
+                 <!--  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Cook</input>
+                
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Food Supper</input>
+                  
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">Both</input> --> 
+             </div>
+            </div>
+            <!-- </br> -->
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+               <a4j:commandButton   id="signUpButtonId"  value="Sign Up" styleClass="btn btn-success"  onclick="validateSignUp();return false;"   ></a4j:commandButton>												
+			   <a4j:jsFunction  id="signUpJsFunctionId"  name="userSugnUp"    action="#{registrationBean.signUp}"  execute="@form"></a4j:jsFunction>
+											               
+               <!-- <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button> -->
+              </div>
+            </div>
+            </fieldset>
+            </h:form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
 
 
 
