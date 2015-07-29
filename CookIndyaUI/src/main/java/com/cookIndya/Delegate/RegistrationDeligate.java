@@ -14,15 +14,25 @@ public class RegistrationDeligate {
 			
 			JSONObject json = new JSONObject();
 			
-			//json.put("userName", regsVO.getName());
-			json.put("userName", "Uday Bhaskar Achary");
-			json.put("password", "Password@123");
-			json.put("startDate", "18-07-2015");
-			json.put("expiry", "18-07-2017");
-			json.put("blocked", "N");
-			json.put("isAdmin", "N");
+			if(regsVO.getEmailId().length() > 0){
+				json.put("emailId", regsVO.getEmailId());
+			}
 			
+			if(regsVO.getMobileNumber().length() > 0){
+				json.put("mobileNumber", regsVO.getMobileNumber());
+			}
 			
+			if(regsVO.getName().length() > 0){
+				json.put("userName", regsVO.getName());
+			}
+			
+			if(regsVO.getPassword().length() > 0){
+				json.put("password", regsVO.getPassword());
+			}
+			
+			if(regsVO.getUserType().length() > 0){
+				json.put("userType", regsVO.getUserType());
+			}
 			
 			ServiceIn service = new ServiceImpl();
 			

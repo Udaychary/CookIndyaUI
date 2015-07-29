@@ -27,7 +27,7 @@ public class ServiceImpl implements ServiceIn {
 			
 			System.out.println("Output from Server .... \n");
 			//String output = response.getEntity(String.class);
-			System.out.println();
+			System.out.println(response.getStatus());
 			
 			
 			
