@@ -3,6 +3,7 @@ package com.cookIndya.BackingBean;
 import javax.faces.component.html.HtmlInputSecret;
 import javax.faces.component.html.HtmlInputText;
 import javax.faces.component.html.HtmlSelectOneRadio;
+//test code 
 
 public class RegistrationBackingBean {
 	
