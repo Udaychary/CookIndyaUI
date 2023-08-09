@@ -12,7 +12,7 @@ public class RegistrationDeligate {
 		
 		try{
 			
-			JSONObject json = new JSONObject();
+			JSONObject json = new JSONObject(); hjjhvjhvjhvj
 			
 			if(regsVO.getEmailId().length() > 0){
 				json.put("emailId", regsVO.getEmailId());
