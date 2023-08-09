@@ -3,7 +3,7 @@ package com.cookIndya.BackingBean;
 import javax.faces.component.html.HtmlInputSecret;
 import javax.faces.component.html.HtmlInputText;
 import javax.faces.component.html.HtmlSelectOneRadio;
-//added one more test comment to test Slack Notifications
+//this is code for BackingBean
 
 public class RegistrationBackingBean {
 	
